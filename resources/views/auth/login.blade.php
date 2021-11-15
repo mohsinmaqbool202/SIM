@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            <!-- <x-jet-authentication-card-logo /> -->
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -33,8 +33,11 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
+                <a style="margin-right: 105px;" class="text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
+                    Register
+                </a>
                 @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                    <a class="text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif

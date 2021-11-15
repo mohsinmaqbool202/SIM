@@ -152,7 +152,7 @@ class ProductsController extends Controller
         $validate = Validator::make($request->all(), [
             'category_id'  => 'required|numeric',
             'brand_id'  => 'required|numeric',
-            'name'  => 'required|string|min:2|max:200|unique:products',
+            'name'  => 'required|string|min:2|max:200|unique:products,name,'.$id,
             'sku'  => 'required|string|max:100|unique:products,sku,'.$id ,
             'image'  => 'nullable|image|mimes:jpeg,jpg,png|max:1024',
             'cost_price'  => 'required|numeric',
@@ -233,5 +233,15 @@ class ProductsController extends Controller
         $product->delete();
         flash('Product deleted successfully!')->success();
         return back();
+    }
+
+    //HANDLE AJAX REQUEST
+    public function getProductsJson() {
+        $products = Product::with(['product_stock.size'])->get();
+
+        return response()->json([
+            'success' => true,
+            'data'  => $products,
+        ], 200);
     }
 }

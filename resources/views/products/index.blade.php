@@ -28,10 +28,10 @@
                         <a href="{{ route('products.create') }}" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i>Add Product</a><br><br>
                         <table class="table table-bordered datatable">
                             <thead>
-                                <tr>
+                                <tr class="text-center">
                                     <th>#</th>
                                     <th class="text-center">Image</th>
-                                    <th>Name</th>
+                                    <th width="20%">Name</th>
                                     <th>SKU</th>
                                     <th>Category</th>
                                     <th>Brand</th>
@@ -41,7 +41,7 @@
                             <tbody>
                                 @if($products)
                                   @foreach($products as $key=> $product)
-                                    <tr>
+                                    <tr class="text-center">
                                         <td>{{ ++$key }}</td>
                                         <td class="text-center">
                                             <img src="{{ asset('storage/product_images/'.$product->image) }}" width="64px">

@@ -14,4 +14,11 @@
 <link rel="stylesheet" href="{{ asset('admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
 <link rel="stylesheet" href="{{ asset('admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
 
+<style>
+.select2-container--default .select2-selection--single {
+    
+    height: 36px !important;
+}
+</style>
+
 @stack('css')

@@ -28,16 +28,16 @@
                         <a href="{{ route('categories.create') }}" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i>Add Category</a><br><br>
                         <table class="table table-bordered datatable">
                             <thead>
-                                <tr>
+                                <tr class="text-center">
                                     <th>#</th>
-                                    <th>Name</th>
+                                    <th width="40%">Name</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @if($categories)
                                   @foreach($categories as $key=> $category)
-                                    <tr>
+                                    <tr class="text-center">
                                         <td>{{ ++$key }}</td>
                                         <td>{{ $category->name ?? '' }}</td>
                                         <td>

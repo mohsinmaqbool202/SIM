@@ -28,7 +28,7 @@
                         <a href="{{ route('brands.create') }}" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i>Add Brand</a><br><br>
                         <table class="table table-bordered datatable">
                             <thead>
-                                <tr>
+                                <tr class="text-center">
                                     <th>#</th>
                                     <th>Name</th>
                                     <th>Action</th>
@@ -37,7 +37,7 @@
                             <tbody>
                                 @if($brands)
                                   @foreach($brands as $key=> $brand)
-                                    <tr>
+                                    <tr class="text-center">
                                         <td>{{ ++$key }}</td>
                                         <td>{{ $brand->name ?? '' }}</td>
                                         <td>
