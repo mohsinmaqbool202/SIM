@@ -1,7 +1,6 @@
 import Vue from 'vue';
 require('./bootstrap');
 
-Vue.component('example-component', require('./components/ExampleComponents').default);
 Vue.component('product-add', require('./components/products/ProductAdd').default);
 Vue.component('product-edit', require('./components/products/ProductEdit').default);
 Vue.component('stock-manage', require('./components/stocks/StockManage').default);
